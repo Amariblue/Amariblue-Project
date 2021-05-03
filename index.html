@@ -1,24 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
+    <title>JS_Homework</title>
+    <meta charset="UTF-8" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
 </head>
 
+</head>
 
 <body>
-    <h1>
-    Hello! Here we learn hosting...
-    </h1>
-    <img src="https://images.yourstory.com/cs/2/fb7ee200-7579-11e9-995c-171c030e4eb8/Web_hosting1560413676163.jpg?fm=png&auto=format&ar=2:1&mode=crop&crop=face" alt="Hosting" size="150">
-    <form>
-        <input type="enter" placeholder="Enter your email"/>
-        <input type="password" placeholder="Enter your password">
-        <input type="submit" value="Login" />
-    </form>
-    <script src="script.js"></script>
+    <div class="container-sm" style="width:700px; height:800px; border: border-info;">
+        <br />
+        <form class="search-field" id="search-form">
+            <input type="text" id="search-input" placeholder="Enter a city">
+            <button class="btn btn-light btn-sm">
+                Submit
+            </button>
+        </form>
+        <br />
+        <h1>
+            <span id="city">
+                Zurich
+            </span>
+        </h1>
+        <button>
+            <div class="Current location">
+                Current location
+            </div>
+        </button>
+        <h4>
+            Date
+        </h4>
+        <h2 style="font-weight: 400;">
+            ☀️
+            <br />
+            <span id=description>
+                Sunny
+            </span>
+        </h2>
+        <h3>
+            <span class="temperature" id="temp" style="font-size: 22px;">
+                <strong> 8° </strong>
+            </span>
+            °C
+            <br />
+            max <span id=max> 10</span>
+            | min
+            <span id=min> 2</span>
+            °C
+            <br />
+            <br />
+            Humidity:
+            <span id=humidity> 0 </span> %
+            <br />
+            Wind:
+            <span id=wind> 0 </span> km/h
+        </h3>
+
+        <div class="row">
+
+            <div class="col">
+                <div class="card-text">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="card-img-top">
+                            </div>
+                            <h5>
+                                Monday
+                            </h5>
+                            <span class="emoji">
+                                ☀️
+                            </span>
+                            <br />
+                            <span class="temperature">
+                                <strong> 15° </strong>
+                                <br />
+                                15° | 4°
+                                <br />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card-text">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="card-img-top">
+                            </div>
+                            <h5>
+                                Tuesday
+                            </h5>
+                            <span class="emoji">
+                                🌤️
+                            </span>
+                            <br />
+                            <span class="temperature">
+                                <strong> 12° </strong>
+                                <br />
+                                12° | 4°
+                                <br />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card-text">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="card-img-top">
+                            </div>
+                            <h5>
+                                Wednesday
+                            </h5>
+                            <span class="emoji">
+                                🌦️
+                            </span>
+                            <br />
+                            <span class="temperature">
+                                <strong> 5° </strong>
+                                <br />
+                                5° | -2°
+                                <br />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card-text">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="card-img-top">
+                            </div>
+                            <h5>
+                                Thursday
+                            </h5>
+                            <span class="emoji">
+                                🌨️
+                            </span>
+                            <br />
+                            <span class="temperature">
+                                <strong> 4° </strong>
+                                <br />
+                                4° | -2°
+                                <br />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card-text">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="card-img-top">
+                            </div>
+                            <h5>
+                                Friday
+                            </h5>
+                            <span class="emoji">
+                                ⛅
+                            </span>
+                            <br />
+                            <span class="temperature">
+                                <strong> 8° </strong>
+                                <br />
+                                8° | 0°
+                                <br />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <br />
+        </div>
+        <br />
+        <br />
+        <p>
+            <a href="https://www.pollenundallergie.ch/infos-sur-pollens-et-allergies/informations-polliniques/prevision-pollinique/?oid=1828&lang=fr"
+                target="blank" text-decoration="none">
+                <button>
+                    <div class="pollen">
+                        Pollen alert
+                    </div>
+                </button>
+
+            </a>
+        </p>
+    </div>
+<script src="script.js"></script>
+
+    </div>
 </body>
+
 </html>
