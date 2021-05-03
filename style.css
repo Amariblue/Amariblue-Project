@@ -1,7 +1,6 @@
-h1,
+CSS h1,
 h2,
-h3,
-h4 {
+h3 {
   color: #f184c7;
   font-family: "Montserrat", sans-serif;
   text-align: center;
@@ -9,15 +8,13 @@ h4 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
 h1 {
   font-size: 50px;
   font-weight: bold;
 }
-
 h3 {
-  font-weight: 300;
-  font-size: 18px;
+  font-weight: 200;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -92,8 +89,7 @@ button {
   border: 1px solid #e64ae6;
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'>🕊️<text y='50%'>🕊️</text></svg>")
       16 0,
-    auto;
-  /*!emojicursor.app*/
+    auto; /*!emojicursor.app*/
 }
 
 .row {
